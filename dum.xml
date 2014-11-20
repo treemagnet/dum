@@ -93,8 +93,17 @@
                   </block>
                 </value>
                 <next>
-                  <block type="expansion_servopower" id="18">
-                    <field name="SERVO">OFF</field>
+                  <block type="robot_delay" id="75" inline="true">
+                    <value name="DELAY">
+                      <block type="math_number" id="82">
+                        <field name="NUM">5000</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="expansion_servopower" id="18">
+                        <field name="SERVO">OFF</field>
+                      </block>
+                    </next>
                   </block>
                 </next>
               </block>
