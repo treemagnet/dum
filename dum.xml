@@ -1,5 +1,5 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="expansion_servopower" id="1" x="1" y="1">
+  <block type="expansion_servopower" id="1" x="38" y="27">
     <field name="SERVO">ON</field>
     <next>
       <block type="variables_set" id="2" inline="true">
@@ -78,8 +78,18 @@
             <next>
               <block type="expansion_gripper" id="47" inline="true">
                 <value name="NUMBER">
-                  <block type="math_number" id="54">
-                    <field name="NUM">1</field>
+                  <block type="math_arithmetic" id="61" inline="true">
+                    <field name="OP">ADD</field>
+                    <value name="A">
+                      <block type="variables_get" id="66">
+                        <field name="VAR">grip</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="math_number" id="73">
+                        <field name="NUM">10</field>
+                      </block>
+                    </value>
                   </block>
                 </value>
                 <next>
