@@ -10,12 +10,52 @@
           </block>
         </value>
         <next>
-          <block type="robot_delay" id="4" inline="true">
-            <value name="DELAY">
-              <block type="math_number" id="5">
-                <field name="NUM">1000</field>
+          <block type="controls_whileUntil" id="12" inline="false">
+            <field name="MODE">WHILE</field>
+            <value name="NUMBER">
+              <block type="logic_compare" id="40" inline="true">
+                <field name="OP">LTE</field>
+                <value name="A">
+                  <block type="variables_get" id="52">
+                    <field name="VAR">grip</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="47">
+                    <field name="NUM">5</field>
+                  </block>
+                </value>
               </block>
             </value>
+            <statement name="DO">
+              <block type="robot_delay" id="4" inline="true">
+                <value name="DELAY">
+                  <block type="math_number" id="5">
+                    <field name="NUM">1000</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="variables_set" id="93" inline="true">
+                    <field name="VAR">grip</field>
+                    <value name="VALUE">
+                      <block type="math_arithmetic" id="100" inline="true">
+                        <field name="OP">ADD</field>
+                        <value name="A">
+                          <block type="variables_get" id="105">
+                            <field name="VAR">grip</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_number" id="112">
+                            <field name="NUM">1</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </statement>
             <next>
               <block type="expansion_servopower" id="6">
                 <field name="SERVO">OFF</field>
