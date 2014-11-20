@@ -76,8 +76,18 @@
               </block>
             </statement>
             <next>
-              <block type="expansion_servopower" id="18">
-                <field name="SERVO">OFF</field>
+              <block type="variables_set" id="40" inline="true">
+                <field name="VAR">grip</field>
+                <value name="VALUE">
+                  <block type="math_number" id="41">
+                    <field name="NUM">1</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="expansion_servopower" id="18">
+                    <field name="SERVO">OFF</field>
+                  </block>
+                </next>
               </block>
             </next>
           </block>
