@@ -6,58 +6,77 @@
         <field name="VAR">grip</field>
         <value name="VALUE">
           <block type="math_number" id="3">
-            <field name="NUM">0</field>
+            <field name="NUM">1</field>
           </block>
         </value>
         <next>
-          <block type="controls_whileUntil" id="12" inline="false">
+          <block type="controls_whileUntil" id="4" inline="false">
             <field name="MODE">WHILE</field>
             <value name="NUMBER">
-              <block type="logic_compare" id="40" inline="true">
+              <block type="logic_compare" id="5" inline="true">
                 <field name="OP">LTE</field>
                 <value name="A">
-                  <block type="variables_get" id="52">
+                  <block type="variables_get" id="6">
                     <field name="VAR">grip</field>
                   </block>
                 </value>
                 <value name="B">
-                  <block type="math_number" id="47">
+                  <block type="math_number" id="7">
                     <field name="NUM">5</field>
                   </block>
                 </value>
               </block>
             </value>
             <statement name="DO">
-              <block type="robot_delay" id="4" inline="true">
-                <value name="DELAY">
-                  <block type="math_number" id="5">
-                    <field name="NUM">1000</field>
+              <block type="expansion_gripper" id="8" inline="true">
+                <value name="NUMBER">
+                  <block type="math_arithmetic" id="22" inline="true">
+                    <field name="OP">ADD</field>
+                    <value name="A">
+                      <block type="math_number" id="33">
+                        <field name="NUM">1</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="math_number" id="40">
+                        <field name="NUM">10</field>
+                      </block>
+                    </value>
                   </block>
                 </value>
                 <next>
-                  <block type="variables_set" id="93" inline="true">
-                    <field name="VAR">grip</field>
-                    <value name="VALUE">
-                      <block type="math_arithmetic" id="100" inline="true">
-                        <field name="OP">ADD</field>
-                        <value name="A">
-                          <block type="variables_get" id="105">
-                            <field name="VAR">grip</field>
-                          </block>
-                        </value>
-                        <value name="B">
-                          <block type="math_number" id="112">
-                            <field name="NUM">1</field>
+                  <block type="robot_delay" id="9" inline="true">
+                    <value name="DELAY">
+                      <block type="math_number" id="10">
+                        <field name="NUM">1000</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="variables_set" id="11" inline="true">
+                        <field name="VAR">grip</field>
+                        <value name="VALUE">
+                          <block type="math_arithmetic" id="12" inline="true">
+                            <field name="OP">ADD</field>
+                            <value name="A">
+                              <block type="variables_get" id="13">
+                                <field name="VAR">grip</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="math_number" id="14">
+                                <field name="NUM">1</field>
+                              </block>
+                            </value>
                           </block>
                         </value>
                       </block>
-                    </value>
+                    </next>
                   </block>
                 </next>
               </block>
             </statement>
             <next>
-              <block type="expansion_servopower" id="6">
+              <block type="expansion_servopower" id="15">
                 <field name="SERVO">OFF</field>
               </block>
             </next>
