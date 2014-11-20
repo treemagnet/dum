@@ -1,23 +1,23 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="expansion_servopower" id="6" x="1" y="1">
+  <block type="expansion_servopower" id="1" x="1" y="1">
     <field name="SERVO">ON</field>
     <next>
-      <block type="variables_set" id="57" inline="true">
+      <block type="variables_set" id="2" inline="true">
         <field name="VAR">grip</field>
         <value name="VALUE">
-          <block type="math_number" id="64">
+          <block type="math_number" id="3">
             <field name="NUM">0</field>
           </block>
         </value>
         <next>
-          <block type="robot_delay" id="66" inline="true">
+          <block type="robot_delay" id="4" inline="true">
             <value name="DELAY">
-              <block type="math_number" id="73">
+              <block type="math_number" id="5">
                 <field name="NUM">1000</field>
               </block>
             </value>
             <next>
-              <block type="expansion_servopower" id="88">
+              <block type="expansion_servopower" id="6">
                 <field name="SERVO">OFF</field>
               </block>
             </next>
