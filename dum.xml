@@ -76,10 +76,9 @@
               </block>
             </statement>
             <next>
-              <block type="variables_set" id="40" inline="true">
-                <field name="VAR">grip</field>
-                <value name="VALUE">
-                  <block type="math_number" id="41">
+              <block type="expansion_gripper" id="47" inline="true">
+                <value name="NUMBER">
+                  <block type="math_number" id="54">
                     <field name="NUM">1</field>
                   </block>
                 </value>
