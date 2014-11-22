@@ -30,29 +30,38 @@
                   </block>
                 </value>
                 <next>
-                  <block type="expansion_gripper" id="8" inline="true">
-                    <value name="NUMBER">
-                      <block type="math_number" id="11">
-                        <field name="NUM">50</field>
+                  <block type="robot_delay" id="216" inline="true">
+                    <value name="DELAY">
+                      <block type="math_number" id="217">
+                        <field name="NUM">1000</field>
                       </block>
                     </value>
                     <next>
-                      <block type="robot_delay" id="12" inline="true">
-                        <value name="DELAY">
-                          <block type="math_number" id="13">
-                            <field name="NUM">1000</field>
+                      <block type="expansion_gripper" id="8" inline="true">
+                        <value name="NUMBER">
+                          <block type="math_number" id="11">
+                            <field name="NUM">50</field>
                           </block>
                         </value>
                         <next>
-                          <block type="expansion_gripper" id="205" inline="true">
-                            <value name="NUMBER">
-                              <block type="math_number" id="206">
-                                <field name="NUM">1</field>
+                          <block type="robot_delay" id="12" inline="true">
+                            <value name="DELAY">
+                              <block type="math_number" id="13">
+                                <field name="NUM">1000</field>
                               </block>
                             </value>
                             <next>
-                              <block type="expansion_servopower" id="215">
-                                <field name="SERVO">OFF</field>
+                              <block type="expansion_gripper" id="205" inline="true">
+                                <value name="NUMBER">
+                                  <block type="math_number" id="206">
+                                    <field name="NUM">1</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="expansion_servopower" id="215">
+                                    <field name="SERVO">OFF</field>
+                                  </block>
+                                </next>
                               </block>
                             </next>
                           </block>
