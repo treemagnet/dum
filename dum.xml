@@ -101,7 +101,7 @@
                                       <block type="oled_drawnumber" id="137" inline="true">
                                         <value name="NUMBER">
                                           <block type="variables_get" id="144">
-                                            <field name="VAR">count</field>
+                                            <field name="VAR">grip</field>
                                           </block>
                                         </value>
                                         <next>
