@@ -96,22 +96,35 @@
                                   </block>
                                 </value>
                                 <next>
-                                  <block type="expansion_gripper" id="18" inline="true">
-                                    <value name="NUMBER">
-                                      <block type="math_arithmetic" id="19" inline="true">
-                                        <field name="OP">ADD</field>
-                                        <value name="A">
-                                          <block type="variables_get" id="20">
-                                            <field name="VAR">grip</field>
+                                  <block type="oled_cleardisplay" id="128">
+                                    <next>
+                                      <block type="oled_drawnumber" id="137" inline="true">
+                                        <value name="NUMBER">
+                                          <block type="variables_get" id="144">
+                                            <field name="VAR">count</field>
                                           </block>
                                         </value>
-                                        <value name="B">
-                                          <block type="math_number" id="21">
-                                            <field name="NUM">10</field>
+                                        <next>
+                                          <block type="expansion_gripper" id="18" inline="true">
+                                            <value name="NUMBER">
+                                              <block type="math_arithmetic" id="19" inline="true">
+                                                <field name="OP">ADD</field>
+                                                <value name="A">
+                                                  <block type="variables_get" id="20">
+                                                    <field name="VAR">grip</field>
+                                                  </block>
+                                                </value>
+                                                <value name="B">
+                                                  <block type="math_number" id="21">
+                                                    <field name="NUM">10</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </value>
                                           </block>
-                                        </value>
+                                        </next>
                                       </block>
-                                    </value>
+                                    </next>
                                   </block>
                                 </next>
                               </block>
