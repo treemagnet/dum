@@ -69,6 +69,25 @@
                             </value>
                           </block>
                         </value>
+                        <next>
+                          <block type="expansion_gripper" id="18" inline="true">
+                            <value name="NUMBER">
+                              <block type="math_arithmetic" id="19" inline="true">
+                                <field name="OP">ADD</field>
+                                <value name="A">
+                                  <block type="variables_get" id="20">
+                                    <field name="VAR">grip</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block type="math_number" id="21">
+                                    <field name="NUM">10</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
                       </block>
                     </next>
                   </block>
@@ -76,34 +95,15 @@
               </block>
             </statement>
             <next>
-              <block type="expansion_gripper" id="18" inline="true">
-                <value name="NUMBER">
-                  <block type="math_arithmetic" id="19" inline="true">
-                    <field name="OP">ADD</field>
-                    <value name="A">
-                      <block type="variables_get" id="20">
-                        <field name="VAR">grip</field>
-                      </block>
-                    </value>
-                    <value name="B">
-                      <block type="math_number" id="21">
-                        <field name="NUM">10</field>
-                      </block>
-                    </value>
+              <block type="robot_delay" id="22" inline="true">
+                <value name="DELAY">
+                  <block type="math_number" id="23">
+                    <field name="NUM">5000</field>
                   </block>
                 </value>
                 <next>
-                  <block type="robot_delay" id="22" inline="true">
-                    <value name="DELAY">
-                      <block type="math_number" id="23">
-                        <field name="NUM">5000</field>
-                      </block>
-                    </value>
-                    <next>
-                      <block type="expansion_servopower" id="24">
-                        <field name="SERVO">OFF</field>
-                      </block>
-                    </next>
+                  <block type="expansion_servopower" id="24">
+                    <field name="SERVO">OFF</field>
                   </block>
                 </next>
               </block>
