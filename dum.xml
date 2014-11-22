@@ -9,82 +9,125 @@
             <field name="NUM">1</field>
           </block>
         </value>
-        <next>
-          <block type="controls_whileUntil" id="39" inline="false">
+      </block>
+    </next>
+  </block>
+  <block type="variables_set" id="58" inline="true" x="51" y="105">
+    <field name="VAR">count</field>
+    <value name="VALUE">
+      <block type="math_number" id="65">
+        <field name="NUM">1</field>
+      </block>
+    </value>
+    <next>
+      <block type="controls_whileUntil" id="39" inline="false">
+        <field name="MODE">WHILE</field>
+        <value name="NUMBER">
+          <block type="logic_compare" id="80" inline="true">
+            <field name="OP">LTE</field>
+            <value name="A">
+              <block type="variables_get" id="94">
+                <field name="VAR">count</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number" id="87">
+                <field name="NUM">2</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO">
+          <block type="controls_whileUntil" id="4" inline="false">
             <field name="MODE">WHILE</field>
+            <value name="NUMBER">
+              <block type="logic_compare" id="5" inline="true">
+                <field name="OP">LTE</field>
+                <value name="A">
+                  <block type="variables_get" id="6">
+                    <field name="VAR">grip</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="7">
+                    <field name="NUM">5</field>
+                  </block>
+                </value>
+              </block>
+            </value>
             <statement name="DO">
-              <block type="controls_whileUntil" id="4" inline="false">
-                <field name="MODE">WHILE</field>
+              <block type="expansion_gripper" id="8" inline="true">
                 <value name="NUMBER">
-                  <block type="logic_compare" id="5" inline="true">
-                    <field name="OP">LTE</field>
+                  <block type="math_arithmetic" id="9" inline="true">
+                    <field name="OP">MULTIPLY</field>
                     <value name="A">
-                      <block type="variables_get" id="6">
+                      <block type="variables_get" id="10">
                         <field name="VAR">grip</field>
                       </block>
                     </value>
                     <value name="B">
-                      <block type="math_number" id="7">
-                        <field name="NUM">5</field>
+                      <block type="math_number" id="11">
+                        <field name="NUM">10</field>
                       </block>
                     </value>
                   </block>
                 </value>
-                <statement name="DO">
-                  <block type="expansion_gripper" id="8" inline="true">
-                    <value name="NUMBER">
-                      <block type="math_arithmetic" id="9" inline="true">
-                        <field name="OP">MULTIPLY</field>
-                        <value name="A">
-                          <block type="variables_get" id="10">
-                            <field name="VAR">grip</field>
-                          </block>
-                        </value>
-                        <value name="B">
-                          <block type="math_number" id="11">
-                            <field name="NUM">10</field>
-                          </block>
-                        </value>
+                <next>
+                  <block type="robot_delay" id="12" inline="true">
+                    <value name="DELAY">
+                      <block type="math_number" id="13">
+                        <field name="NUM">1000</field>
                       </block>
                     </value>
                     <next>
-                      <block type="robot_delay" id="12" inline="true">
-                        <value name="DELAY">
-                          <block type="math_number" id="13">
-                            <field name="NUM">1000</field>
+                      <block type="variables_set" id="14" inline="true">
+                        <field name="VAR">grip</field>
+                        <value name="VALUE">
+                          <block type="math_arithmetic" id="15" inline="true">
+                            <field name="OP">ADD</field>
+                            <value name="A">
+                              <block type="variables_get" id="16">
+                                <field name="VAR">grip</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="math_number" id="17">
+                                <field name="NUM">1</field>
+                              </block>
+                            </value>
                           </block>
                         </value>
                         <next>
-                          <block type="variables_set" id="14" inline="true">
-                            <field name="VAR">grip</field>
-                            <value name="VALUE">
-                              <block type="math_arithmetic" id="15" inline="true">
+                          <block type="expansion_gripper" id="18" inline="true">
+                            <value name="NUMBER">
+                              <block type="math_arithmetic" id="19" inline="true">
                                 <field name="OP">ADD</field>
                                 <value name="A">
-                                  <block type="variables_get" id="16">
+                                  <block type="variables_get" id="20">
                                     <field name="VAR">grip</field>
                                   </block>
                                 </value>
                                 <value name="B">
-                                  <block type="math_number" id="17">
-                                    <field name="NUM">1</field>
+                                  <block type="math_number" id="21">
+                                    <field name="NUM">10</field>
                                   </block>
                                 </value>
                               </block>
                             </value>
                             <next>
-                              <block type="expansion_gripper" id="18" inline="true">
-                                <value name="NUMBER">
-                                  <block type="math_arithmetic" id="19" inline="true">
+                              <block type="variables_set" id="95" inline="true">
+                                <field name="VAR">grip</field>
+                                <value name="VALUE">
+                                  <block type="math_arithmetic" id="96" inline="true">
                                     <field name="OP">ADD</field>
                                     <value name="A">
-                                      <block type="variables_get" id="20">
-                                        <field name="VAR">grip</field>
+                                      <block type="variables_get" id="97">
+                                        <field name="VAR">count</field>
                                       </block>
                                     </value>
                                     <value name="B">
-                                      <block type="math_number" id="21">
-                                        <field name="NUM">10</field>
+                                      <block type="math_number" id="98">
+                                        <field name="NUM">1</field>
                                       </block>
                                     </value>
                                   </block>
@@ -96,21 +139,21 @@
                       </block>
                     </next>
                   </block>
-                </statement>
+                </next>
               </block>
             </statement>
+          </block>
+        </statement>
+        <next>
+          <block type="robot_delay" id="22" inline="true">
+            <value name="DELAY">
+              <block type="math_number" id="23">
+                <field name="NUM">5000</field>
+              </block>
+            </value>
             <next>
-              <block type="robot_delay" id="22" inline="true">
-                <value name="DELAY">
-                  <block type="math_number" id="23">
-                    <field name="NUM">5000</field>
-                  </block>
-                </value>
-                <next>
-                  <block type="expansion_servopower" id="24">
-                    <field name="SERVO">OFF</field>
-                  </block>
-                </next>
+              <block type="expansion_servopower" id="24">
+                <field name="SERVO">OFF</field>
               </block>
             </next>
           </block>
