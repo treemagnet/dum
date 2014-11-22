@@ -94,14 +94,28 @@
                                           </block>
                                         </value>
                                         <next>
-                                          <block type="oled_cleardisplay" id="342">
+                                          <block type="oled_setcursor" id="343" inline="true">
+                                            <value name="STARTX">
+                                              <block type="math_number" id="344">
+                                                <field name="NUM">1</field>
+                                              </block>
+                                            </value>
+                                            <value name="STARTY">
+                                              <block type="math_number" id="345">
+                                                <field name="NUM">1</field>
+                                              </block>
+                                            </value>
                                             <next>
-                                              <block type="oled_drawnumber" id="332" inline="true">
-                                                <value name="NUMBER">
-                                                  <block type="variables_get" id="333">
-                                                    <field name="VAR">count</field>
+                                              <block type="oled_cleardisplay" id="342">
+                                                <next>
+                                                  <block type="oled_drawnumber" id="332" inline="true">
+                                                    <value name="NUMBER">
+                                                      <block type="variables_get" id="333">
+                                                        <field name="VAR">count</field>
+                                                      </block>
+                                                    </value>
                                                   </block>
-                                                </value>
+                                                </next>
                                               </block>
                                             </next>
                                           </block>
