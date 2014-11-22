@@ -144,11 +144,6 @@
                                 <field name="NUM">500</field>
                               </block>
                             </value>
-                            <next>
-                              <block type="expansion_servopower" id="215">
-                                <field name="SERVO">OFF</field>
-                              </block>
-                            </next>
                           </block>
                         </next>
                       </block>
