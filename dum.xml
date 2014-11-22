@@ -30,42 +30,82 @@
                   </block>
                 </value>
                 <next>
-                  <block type="robot_delay" id="216" inline="true">
-                    <value name="DELAY">
-                      <block type="math_number" id="217">
-                        <field name="NUM">1000</field>
+                  <block type="controls_whileUntil" id="223" inline="false">
+                    <field name="MODE">WHILE</field>
+                    <value name="NUMBER">
+                      <block type="logic_compare" id="290" inline="true">
+                        <field name="OP">GTE</field>
+                        <value name="A">
+                          <block type="variables_get" id="236">
+                            <field name="VAR">count</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_number" id="250">
+                            <field name="NUM">5</field>
+                          </block>
+                        </value>
                       </block>
                     </value>
-                    <next>
-                      <block type="expansion_gripper" id="8" inline="true">
-                        <value name="NUMBER">
-                          <block type="math_number" id="11">
-                            <field name="NUM">80</field>
+                    <statement name="DO">
+                      <block type="robot_delay" id="216" inline="true">
+                        <value name="DELAY">
+                          <block type="math_number" id="217">
+                            <field name="NUM">1000</field>
                           </block>
                         </value>
                         <next>
-                          <block type="robot_delay" id="12" inline="true">
-                            <value name="DELAY">
-                              <block type="math_number" id="13">
-                                <field name="NUM">1000</field>
+                          <block type="expansion_gripper" id="8" inline="true">
+                            <value name="NUMBER">
+                              <block type="math_number" id="11">
+                                <field name="NUM">80</field>
                               </block>
                             </value>
                             <next>
-                              <block type="expansion_gripper" id="205" inline="true">
-                                <value name="NUMBER">
-                                  <block type="math_number" id="206">
-                                    <field name="NUM">1</field>
+                              <block type="robot_delay" id="12" inline="true">
+                                <value name="DELAY">
+                                  <block type="math_number" id="13">
+                                    <field name="NUM">1000</field>
                                   </block>
                                 </value>
                                 <next>
-                                  <block type="expansion_servopower" id="215">
-                                    <field name="SERVO">OFF</field>
+                                  <block type="expansion_gripper" id="205" inline="true">
+                                    <value name="NUMBER">
+                                      <block type="math_number" id="206">
+                                        <field name="NUM">1</field>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="variables_set" id="302" inline="true">
+                                        <field name="VAR">count</field>
+                                        <value name="VALUE">
+                                          <block type="math_arithmetic" id="316" inline="true">
+                                            <field name="OP">ADD</field>
+                                            <value name="A">
+                                              <block type="variables_get" id="303">
+                                                <field name="VAR">count</field>
+                                              </block>
+                                            </value>
+                                            <value name="B">
+                                              <block type="math_number" id="317">
+                                                <field name="NUM">1</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </next>
                                   </block>
                                 </next>
                               </block>
                             </next>
                           </block>
                         </next>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="expansion_servopower" id="215">
+                        <field name="SERVO">OFF</field>
                       </block>
                     </next>
                   </block>
