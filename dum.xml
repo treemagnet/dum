@@ -30,9 +30,8 @@
                   </block>
                 </value>
                 <next>
-                  <block type="controls_whileUntil" id="110" inline="false">
-                    <field name="MODE">WHILE</field>
-                    <value name="NUMBER">
+                  <block type="controls_if" id="176" inline="false">
+                    <value name="IF0">
                       <block type="logic_compare" id="111" inline="true">
                         <field name="OP">LTE</field>
                         <value name="A">
@@ -47,7 +46,7 @@
                         </value>
                       </block>
                     </value>
-                    <statement name="DO">
+                    <statement name="DO0">
                       <block type="controls_whileUntil" id="4" inline="false">
                         <field name="MODE">WHILE</field>
                         <value name="NUMBER">
