@@ -31,7 +31,7 @@
                 </value>
                 <next>
                   <block type="controls_whileUntil" id="223" inline="false">
-                    <field name="MODE">WHILE</field>
+                    <field name="MODE">UNTIL</field>
                     <value name="NUMBER">
                       <block type="logic_compare" id="290" inline="true">
                         <field name="OP">GTE</field>
