@@ -94,6 +94,46 @@
                                     </value>
                                   </block>
                                 </value>
+                                <next>
+                                  <block type="controls_whileUntil" id="110" inline="false">
+                                    <field name="MODE">WHILE</field>
+                                    <value name="NUMBER">
+                                      <block type="logic_compare" id="111" inline="true">
+                                        <field name="OP">LTE</field>
+                                        <value name="A">
+                                          <block type="variables_get" id="112">
+                                            <field name="VAR">count</field>
+                                          </block>
+                                        </value>
+                                        <value name="B">
+                                          <block type="math_number" id="113">
+                                            <field name="NUM">5</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <statement name="DO">
+                                      <block type="variables_set" id="95" inline="true">
+                                        <field name="VAR">count</field>
+                                        <value name="VALUE">
+                                          <block type="math_arithmetic" id="96" inline="true">
+                                            <field name="OP">ADD</field>
+                                            <value name="A">
+                                              <block type="variables_get" id="97">
+                                                <field name="VAR">count</field>
+                                              </block>
+                                            </value>
+                                            <value name="B">
+                                              <block type="math_number" id="98">
+                                                <field name="NUM">1</field>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </statement>
+                                  </block>
+                                </next>
                               </block>
                             </next>
                           </block>
@@ -103,35 +143,15 @@
                   </block>
                 </statement>
                 <next>
-                  <block type="variables_set" id="95" inline="true">
-                    <field name="VAR">count</field>
-                    <value name="VALUE">
-                      <block type="math_arithmetic" id="96" inline="true">
-                        <field name="OP">ADD</field>
-                        <value name="A">
-                          <block type="variables_get" id="97">
-                            <field name="VAR">count</field>
-                          </block>
-                        </value>
-                        <value name="B">
-                          <block type="math_number" id="98">
-                            <field name="NUM">1</field>
-                          </block>
-                        </value>
+                  <block type="robot_delay" id="22" inline="true">
+                    <value name="DELAY">
+                      <block type="math_number" id="23">
+                        <field name="NUM">5000</field>
                       </block>
                     </value>
                     <next>
-                      <block type="robot_delay" id="22" inline="true">
-                        <value name="DELAY">
-                          <block type="math_number" id="23">
-                            <field name="NUM">5000</field>
-                          </block>
-                        </value>
-                        <next>
-                          <block type="expansion_servopower" id="24">
-                            <field name="SERVO">OFF</field>
-                          </block>
-                        </next>
+                      <block type="expansion_servopower" id="24">
+                        <field name="SERVO">OFF</field>
                       </block>
                     </next>
                   </block>
