@@ -14,7 +14,7 @@
             <field name="VAR">count</field>
             <value name="VALUE">
               <block type="math_number" id="65">
-                <field name="NUM">1</field>
+                <field name="NUM">0</field>
               </block>
             </value>
             <next>
@@ -42,7 +42,7 @@
                         </value>
                         <value name="B">
                           <block type="math_number" id="250">
-                            <field name="NUM">3</field>
+                            <field name="NUM">5</field>
                           </block>
                         </value>
                       </block>
