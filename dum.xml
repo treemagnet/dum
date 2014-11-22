@@ -42,7 +42,7 @@
                         </value>
                         <value name="B">
                           <block type="math_number" id="250">
-                            <field name="NUM">10</field>
+                            <field name="NUM">3</field>
                           </block>
                         </value>
                       </block>
@@ -114,15 +114,6 @@
                                                         <field name="VAR">count</field>
                                                       </block>
                                                     </value>
-                                                    <next>
-                                                      <block type="expansion_gripper" id="346" inline="true">
-                                                        <value name="NUMBER">
-                                                          <block type="math_number" id="347">
-                                                            <field name="NUM">1</field>
-                                                          </block>
-                                                        </value>
-                                                      </block>
-                                                    </next>
                                                   </block>
                                                 </next>
                                               </block>
@@ -140,8 +131,17 @@
                       </block>
                     </statement>
                     <next>
-                      <block type="expansion_servopower" id="215">
-                        <field name="SERVO">OFF</field>
+                      <block type="expansion_gripper" id="346" inline="true">
+                        <value name="NUMBER">
+                          <block type="math_number" id="347">
+                            <field name="NUM">1</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="expansion_servopower" id="215">
+                            <field name="SERVO">OFF</field>
+                          </block>
+                        </next>
                       </block>
                     </next>
                   </block>
