@@ -30,105 +30,33 @@
                   </block>
                 </value>
                 <next>
-                  <block type="controls_if" id="176" inline="false">
-                    <value name="IF0">
-                      <block type="logic_compare" id="111" inline="true">
-                        <field name="OP">LTE</field>
-                        <value name="A">
-                          <block type="variables_get" id="112">
-                            <field name="VAR">count</field>
-                          </block>
-                        </value>
-                        <value name="B">
-                          <block type="math_number" id="113">
-                            <field name="NUM">8</field>
-                          </block>
-                        </value>
+                  <block type="expansion_gripper" id="8" inline="true">
+                    <value name="NUMBER">
+                      <block type="math_number" id="11">
+                        <field name="NUM">5</field>
                       </block>
                     </value>
-                    <statement name="DO0">
-                      <block type="controls_whileUntil" id="4" inline="false">
-                        <field name="MODE">WHILE</field>
-                        <value name="NUMBER">
-                          <block type="logic_compare" id="5" inline="true">
-                            <field name="OP">LTE</field>
-                            <value name="A">
-                              <block type="variables_get" id="6">
-                                <field name="VAR">grip</field>
-                              </block>
-                            </value>
-                            <value name="B">
-                              <block type="math_number" id="7">
-                                <field name="NUM">5</field>
-                              </block>
-                            </value>
+                    <next>
+                      <block type="robot_delay" id="12" inline="true">
+                        <value name="DELAY">
+                          <block type="math_number" id="13">
+                            <field name="NUM">1000</field>
                           </block>
                         </value>
-                        <statement name="DO">
-                          <block type="expansion_gripper" id="8" inline="true">
-                            <value name="NUMBER">
-                              <block type="math_number" id="11">
-                                <field name="NUM">5</field>
-                              </block>
-                            </value>
-                            <next>
-                              <block type="robot_delay" id="12" inline="true">
-                                <value name="DELAY">
-                                  <block type="math_number" id="13">
-                                    <field name="NUM">1000</field>
-                                  </block>
-                                </value>
-                                <next>
-                                  <block type="expansion_gripper" id="205" inline="true">
-                                    <value name="NUMBER">
-                                      <block type="math_number" id="206">
-                                        <field name="NUM">1</field>
-                                      </block>
-                                    </value>
-                                  </block>
-                                </next>
-                              </block>
-                            </next>
-                          </block>
-                        </statement>
                         <next>
-                          <block type="variables_set" id="95" inline="true">
-                            <field name="VAR">count</field>
-                            <value name="VALUE">
-                              <block type="math_arithmetic" id="96" inline="true">
-                                <field name="OP">ADD</field>
-                                <value name="A">
-                                  <block type="variables_get" id="97">
-                                    <field name="VAR">count</field>
-                                  </block>
-                                </value>
-                                <value name="B">
-                                  <block type="math_number" id="98">
-                                    <field name="NUM">1</field>
-                                  </block>
-                                </value>
+                          <block type="expansion_gripper" id="205" inline="true">
+                            <value name="NUMBER">
+                              <block type="math_number" id="206">
+                                <field name="NUM">1</field>
                               </block>
                             </value>
                             <next>
-                              <block type="oled_cleardisplay" id="128">
-                                <next>
-                                  <block type="oled_drawnumber" id="137" inline="true">
-                                    <value name="NUMBER">
-                                      <block type="variables_get" id="144">
-                                        <field name="VAR">count</field>
-                                      </block>
-                                    </value>
-                                  </block>
-                                </next>
+                              <block type="expansion_servopower" id="215">
+                                <field name="SERVO">OFF</field>
                               </block>
                             </next>
                           </block>
                         </next>
-                      </block>
-                    </statement>
-                    <next>
-                      <block type="expansion_servopower" id="24">
-                        <field name="SERVO">OFF</field>
                       </block>
                     </next>
                   </block>
