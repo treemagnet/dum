@@ -114,7 +114,7 @@
                                     </value>
                                     <next>
                                       <block type="variables_set" id="95" inline="true">
-                                        <field name="VAR">grip</field>
+                                        <field name="VAR">count</field>
                                         <value name="VALUE">
                                           <block type="math_arithmetic" id="96" inline="true">
                                             <field name="OP">ADD</field>
