@@ -206,6 +206,53 @@
                                                             <field name="NUM">10</field>
                                                           </block>
                                                         </value>
+                                                        <next>
+                                                          <block type="variables_set" id="48" inline="true">
+                                                            <field name="VAR">count</field>
+                                                            <value name="VALUE">
+                                                              <block type="math_arithmetic" id="49" inline="true">
+                                                                <field name="OP">ADD</field>
+                                                                <value name="A">
+                                                                  <block type="variables_get" id="50">
+                                                                    <field name="VAR">ecount</field>
+                                                                  </block>
+                                                                </value>
+                                                                <value name="B">
+                                                                  <block type="math_number" id="51">
+                                                                    <field name="NUM">1</field>
+                                                                  </block>
+                                                                </value>
+                                                              </block>
+                                                            </value>
+                                                            <next>
+                                                              <block type="oled_setcursor" id="52" inline="true">
+                                                                <value name="STARTX">
+                                                                  <block type="math_number" id="53">
+                                                                    <field name="NUM">30</field>
+                                                                  </block>
+                                                                </value>
+                                                                <value name="STARTY">
+                                                                  <block type="math_number" id="54">
+                                                                    <field name="NUM">40</field>
+                                                                  </block>
+                                                                </value>
+                                                                <next>
+                                                                  <block type="oled_cleardisplay" id="55">
+                                                                    <next>
+                                                                      <block type="oled_drawnumber" id="56" inline="true">
+                                                                        <value name="NUMBER">
+                                                                          <block type="variables_get" id="57">
+                                                                            <field name="VAR">count</field>
+                                                                          </block>
+                                                                        </value>
+                                                                      </block>
+                                                                    </next>
+                                                                  </block>
+                                                                </next>
+                                                              </block>
+                                                            </next>
+                                                          </block>
+                                                        </next>
                                                       </block>
                                                     </next>
                                                   </block>
@@ -215,55 +262,8 @@
                                           </block>
                                         </statement>
                                         <next>
-                                          <block type="variables_set" id="48" inline="true">
-                                            <field name="VAR">count</field>
-                                            <value name="VALUE">
-                                              <block type="math_arithmetic" id="49" inline="true">
-                                                <field name="OP">ADD</field>
-                                                <value name="A">
-                                                  <block type="variables_get" id="50">
-                                                    <field name="VAR">ecount</field>
-                                                  </block>
-                                                </value>
-                                                <value name="B">
-                                                  <block type="math_number" id="51">
-                                                    <field name="NUM">1</field>
-                                                  </block>
-                                                </value>
-                                              </block>
-                                            </value>
-                                            <next>
-                                              <block type="oled_setcursor" id="52" inline="true">
-                                                <value name="STARTX">
-                                                  <block type="math_number" id="53">
-                                                    <field name="NUM">30</field>
-                                                  </block>
-                                                </value>
-                                                <value name="STARTY">
-                                                  <block type="math_number" id="54">
-                                                    <field name="NUM">40</field>
-                                                  </block>
-                                                </value>
-                                                <next>
-                                                  <block type="oled_cleardisplay" id="55">
-                                                    <next>
-                                                      <block type="oled_drawnumber" id="56" inline="true">
-                                                        <value name="NUMBER">
-                                                          <block type="variables_get" id="57">
-                                                            <field name="VAR">count</field>
-                                                          </block>
-                                                        </value>
-                                                        <next>
-                                                          <block type="expansion_servopower" id="35">
-                                                            <field name="SERVO">OFF</field>
-                                                          </block>
-                                                        </next>
-                                                      </block>
-                                                    </next>
-                                                  </block>
-                                                </next>
-                                              </block>
-                                            </next>
+                                          <block type="expansion_servopower" id="35">
+                                            <field name="SERVO">OFF</field>
                                           </block>
                                         </next>
                                       </block>
