@@ -157,7 +157,7 @@
                           <block type="expansion_gripper" id="36" inline="true">
                             <value name="NUMBER">
                               <block type="math_number" id="37">
-                                <field name="NUM">0</field>
+                                <field name="NUM">10</field>
                               </block>
                             </value>
                             <next>
