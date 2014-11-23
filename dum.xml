@@ -220,7 +220,7 @@
                                                             </value>
                                                             <next>
                                                               <block type="variables_set" id="48" inline="true">
-                                                                <field name="VAR">count</field>
+                                                                <field name="VAR">ecount</field>
                                                                 <value name="VALUE">
                                                                   <block type="math_arithmetic" id="49" inline="true">
                                                                     <field name="OP">ADD</field>
