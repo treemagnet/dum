@@ -110,19 +110,20 @@
                                                   </block>
                                                 </value>
                                                 <next>
-                                                  <block type="oled_setcursor" id="25" inline="true">
-                                                    <value name="STARTX">
-                                                      <block type="math_number" id="26">
-                                                        <field name="NUM">30</field>
-                                                      </block>
-                                                    </value>
-                                                    <value name="STARTY">
-                                                      <block type="math_number" id="27">
-                                                        <field name="NUM">30</field>
-                                                      </block>
-                                                    </value>
+                                                  <block type="oled_drawtext" id="143">
+                                                    <field name="TEXT">GRIPPER COUNT</field>
                                                     <next>
-                                                      <block type="oled_cleardisplay" id="28">
+                                                      <block type="oled_setcursor" id="25" inline="true">
+                                                        <value name="STARTX">
+                                                          <block type="math_number" id="26">
+                                                            <field name="NUM">50</field>
+                                                          </block>
+                                                        </value>
+                                                        <value name="STARTY">
+                                                          <block type="math_number" id="27">
+                                                            <field name="NUM">30</field>
+                                                          </block>
+                                                        </value>
                                                         <next>
                                                           <block type="oled_drawnumber" id="29" inline="true">
                                                             <value name="NUMBER">
@@ -130,6 +131,9 @@
                                                                 <field name="VAR">count</field>
                                                               </block>
                                                             </value>
+                                                            <next>
+                                                              <block type="oled_cleardisplay" id="28"></block>
+                                                            </next>
                                                           </block>
                                                         </next>
                                                       </block>
