@@ -257,6 +257,29 @@
                                                                                 <field name="VAR">ecount</field>
                                                                               </block>
                                                                             </value>
+                                                                            <next>
+                                                                              <block type="oled_setcursor" id="130" inline="true">
+                                                                                <value name="STARTX">
+                                                                                  <block type="math_number" id="131">
+                                                                                    <field name="NUM">30</field>
+                                                                                  </block>
+                                                                                </value>
+                                                                                <value name="STARTY">
+                                                                                  <block type="math_number" id="132">
+                                                                                    <field name="NUM">30</field>
+                                                                                  </block>
+                                                                                </value>
+                                                                                <next>
+                                                                                  <block type="oled_drawnumber" id="133" inline="true">
+                                                                                    <value name="NUMBER">
+                                                                                      <block type="variables_get" id="134">
+                                                                                        <field name="VAR">count</field>
+                                                                                      </block>
+                                                                                    </value>
+                                                                                  </block>
+                                                                                </next>
+                                                                              </block>
+                                                                            </next>
                                                                           </block>
                                                                         </next>
                                                                       </block>
