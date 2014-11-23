@@ -231,6 +231,94 @@
                                                             </value>
                                                           </block>
                                                         </value>
+                                                        <next>
+                                                          <block type="oled_cleardisplay" id="62">
+                                                            <next>
+                                                              <block type="oled_setcursor" id="94" inline="true">
+                                                                <value name="STARTX">
+                                                                  <block type="math_number" id="95">
+                                                                    <field name="NUM">0</field>
+                                                                  </block>
+                                                                </value>
+                                                                <value name="STARTY">
+                                                                  <block type="math_number" id="96">
+                                                                    <field name="NUM">30</field>
+                                                                  </block>
+                                                                </value>
+                                                                <next>
+                                                                  <block type="oled_drawtext" id="97">
+                                                                    <field name="TEXT">GRIPPER COUNT</field>
+                                                                    <next>
+                                                                      <block type="oled_setcursor" id="98" inline="true">
+                                                                        <value name="STARTX">
+                                                                          <block type="math_number" id="99">
+                                                                            <field name="NUM">90</field>
+                                                                          </block>
+                                                                        </value>
+                                                                        <value name="STARTY">
+                                                                          <block type="math_number" id="100">
+                                                                            <field name="NUM">30</field>
+                                                                          </block>
+                                                                        </value>
+                                                                        <next>
+                                                                          <block type="oled_drawnumber" id="101" inline="true">
+                                                                            <value name="NUMBER">
+                                                                              <block type="variables_get" id="102">
+                                                                                <field name="VAR">count</field>
+                                                                              </block>
+                                                                            </value>
+                                                                            <next>
+                                                                              <block type="oled_setcursor" id="65" inline="true">
+                                                                                <value name="STARTX">
+                                                                                  <block type="math_number" id="66">
+                                                                                    <field name="NUM">0</field>
+                                                                                  </block>
+                                                                                </value>
+                                                                                <value name="STARTY">
+                                                                                  <block type="math_number" id="67">
+                                                                                    <field name="NUM">40</field>
+                                                                                  </block>
+                                                                                </value>
+                                                                                <next>
+                                                                                  <block type="oled_drawtext" id="103">
+                                                                                    <field name="TEXT">ELEVATE COUNT</field>
+                                                                                    <next>
+                                                                                      <block type="oled_setcursor" id="104" inline="true">
+                                                                                        <value name="STARTX">
+                                                                                          <block type="math_number" id="105">
+                                                                                            <field name="NUM">90</field>
+                                                                                          </block>
+                                                                                        </value>
+                                                                                        <value name="STARTY">
+                                                                                          <block type="math_number" id="106">
+                                                                                            <field name="NUM">40</field>
+                                                                                          </block>
+                                                                                        </value>
+                                                                                        <next>
+                                                                                          <block type="oled_drawnumber" id="63" inline="true">
+                                                                                            <value name="NUMBER">
+                                                                                              <block type="variables_get" id="64">
+                                                                                                <field name="VAR">ecount</field>
+                                                                                              </block>
+                                                                                            </value>
+                                                                                          </block>
+                                                                                        </next>
+                                                                                      </block>
+                                                                                    </next>
+                                                                                  </block>
+                                                                                </next>
+                                                                              </block>
+                                                                            </next>
+                                                                          </block>
+                                                                        </next>
+                                                                      </block>
+                                                                    </next>
+                                                                  </block>
+                                                                </next>
+                                                              </block>
+                                                            </next>
+                                                          </block>
+                                                        </next>
                                                       </block>
                                                     </next>
                                                   </block>
@@ -246,104 +334,6 @@
                                         <field name="SERVO">OFF</field>
                                       </block>
                                     </next>
-                                  </block>
-                                </next>
-                              </block>
-                            </next>
-                          </block>
-                        </next>
-                      </block>
-                    </next>
-                  </block>
-                </next>
-              </block>
-            </next>
-          </block>
-        </next>
-      </block>
-    </next>
-  </block>
-  <block type="oled_setcursor" id="74" inline="true" x="637" y="352">
-    <value name="STARTX">
-      <block type="math_number" id="75">
-        <field name="NUM">0</field>
-      </block>
-    </value>
-    <value name="STARTY">
-      <block type="math_number" id="76">
-        <field name="NUM">30</field>
-      </block>
-    </value>
-  </block>
-  <block type="oled_cleardisplay" id="62" x="541" y="943">
-    <next>
-      <block type="oled_setcursor" id="94" inline="true">
-        <value name="STARTX">
-          <block type="math_number" id="95">
-            <field name="NUM">0</field>
-          </block>
-        </value>
-        <value name="STARTY">
-          <block type="math_number" id="96">
-            <field name="NUM">30</field>
-          </block>
-        </value>
-        <next>
-          <block type="oled_drawtext" id="97">
-            <field name="TEXT">GRIPPER COUNT</field>
-            <next>
-              <block type="oled_setcursor" id="98" inline="true">
-                <value name="STARTX">
-                  <block type="math_number" id="99">
-                    <field name="NUM">90</field>
-                  </block>
-                </value>
-                <value name="STARTY">
-                  <block type="math_number" id="100">
-                    <field name="NUM">30</field>
-                  </block>
-                </value>
-                <next>
-                  <block type="oled_drawnumber" id="101" inline="true">
-                    <value name="NUMBER">
-                      <block type="variables_get" id="102">
-                        <field name="VAR">count</field>
-                      </block>
-                    </value>
-                    <next>
-                      <block type="oled_setcursor" id="65" inline="true">
-                        <value name="STARTX">
-                          <block type="math_number" id="66">
-                            <field name="NUM">0</field>
-                          </block>
-                        </value>
-                        <value name="STARTY">
-                          <block type="math_number" id="67">
-                            <field name="NUM">40</field>
-                          </block>
-                        </value>
-                        <next>
-                          <block type="oled_drawtext" id="103">
-                            <field name="TEXT">ELEVATE COUNT</field>
-                            <next>
-                              <block type="oled_setcursor" id="104" inline="true">
-                                <value name="STARTX">
-                                  <block type="math_number" id="105">
-                                    <field name="NUM">90</field>
-                                  </block>
-                                </value>
-                                <value name="STARTY">
-                                  <block type="math_number" id="106">
-                                    <field name="NUM">40</field>
-                                  </block>
-                                </value>
-                                <next>
-                                  <block type="oled_drawnumber" id="63" inline="true">
-                                    <value name="NUMBER">
-                                      <block type="variables_get" id="64">
-                                        <field name="VAR">ecount</field>
-                                      </block>
-                                    </value>
                                   </block>
                                 </next>
                               </block>
