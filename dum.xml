@@ -189,7 +189,7 @@
                                               <block type="expansion_elevation" id="73" inline="true">
                                                 <value name="NUMBER">
                                                   <block type="math_number" id="43">
-                                                    <field name="NUM">60</field>
+                                                    <field name="NUM">20</field>
                                                   </block>
                                                 </value>
                                                 <next>
@@ -203,7 +203,7 @@
                                                       <block type="expansion_elevation" id="85" inline="true">
                                                         <value name="NUMBER">
                                                           <block type="math_number" id="47">
-                                                            <field name="NUM">1</field>
+                                                            <field name="NUM">10</field>
                                                           </block>
                                                         </value>
                                                       </block>
